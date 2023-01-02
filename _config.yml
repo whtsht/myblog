@@ -1,0 +1,42 @@
+title: My-Blog
+description: "Keeping notes and sharing information"
+author:
+  name: "White Shirt"
+  email: "whiteshirt0079@gmail.com"
+  url: "https://github.com/whtsht"
+
+baseurl: /
+
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 3
+paginate_path: /page/:num/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      toc: true
+
+future: true
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-mermaid
+  - jekyll-toc
+
+# Custom variables
+owner: "whtsht"
+year: "2022"
+
+mermaid:
+  src: "https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"
+
+toc:
+  ordered_list: true
+  list_class: my-list-class
+  sublist_class: my-list-class
